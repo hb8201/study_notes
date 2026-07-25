@@ -1,0 +1,42 @@
+                        // 初始化
+//     SHA256_Update(&ctx, str, strlen(str));      // 更新
+//     SHA256_Final(hash, &ctx);                   // 生成
+//     //
+//     printf("SHA256:\t");
+//     for (int i = 0; i < SHA256_DIGEST_LENGTH; i++)
+//     {
+//         printf("%02x", hash[i]);
+//     }
+//     printf("\n");
+// }
+
+// void file_sha1(char *filename)
+// {
+//     FILE *fp = fopen(filename, "rb");
+//     if (fp == NULL)
+//     {
+//         perror("无法打开文件\n");
+//         return;
+//     }
+//     unsigned char hash[SHA_DIGEST_LENGTH];
+//     // 系统文件块大小
+//     char buf[4096];
+//     size_t n;
+//     SHA_CTX ctx;
+//     SHA1_Init(&ctx);
+//     while ((n = fread(buf, 1, sizeof(buf), fp)) > 0)
+//     {
+//         SHA1_Update(&ctx, buf, n);
+//     }
+//     SHA1_Final(hash, &ctx);
+//     fclose(fp);
+
+//     printf("SHA128:\t");
+//     for (int i = 0; i < SHA_DIGEST_LENGTH; i++)
+//     {
+//         printf("%02x", hash[i]);
+//     }
+//     printf("\n");
+// }
+
+void evp_to_md5(char *st

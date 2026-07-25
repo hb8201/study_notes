@@ -1,0 +1,37 @@
+- auto          自动存储类关键字                                            不用显式写，默认就生效
+- break         
+- case          
+- char          
+- const         
+- continue      
+- default       
+- do            
+- double        
+- else          
+- enum          枚举
+- extern        存储类关键字                                              仅用于「声明」，不负责「定义」，优先将 extern 声明放在头文件（.h）中，其他文件包含头文件（避免重复声明）
+- float         
+- for           
+- goto          无条件跳转语句
+- if            
+- inline        函数修饰关键字
+- int           
+- long          
+- register      存储类关键字                                                 仅能修饰 局部变量
+- restrict      指针限定符关键字
+- return        
+- short         
+- signed        有符号
+- sizeof        单目运算符                                                   计算数据类型或变量在内存中占用的字节数
+- static        多功能存储类关键字
+- struct        用户自定义数据类型关键字                                      核心作用是「将多个不同类型的变量（成员）打包成一个整体」，每个成员独占一块内存
+- switch        
+- typedef       类型定义关键字                                             核心作用是「给已有的数据类型（基本类型、自定义类型如 struct/enum、指针等）起一个更简洁、更具语义的别名」
+- union         用户自定义数据类型关键字                                      核心作用是「将多个不同类型的变量（成员）打包成一个整体」，所有成员共用同一块内存
+- unsigned      无符号
+- void          
+- volatile      变量限定符关键字
+- while         
+- _Bool          布尔类型关键字
+- _Complex      复数类型关键字
+- _Imaginary    纯虚数类型关键字

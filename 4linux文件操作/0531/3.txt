@@ -1,0 +1,34 @@
+r)
+{
+    // MD5_CTX ctx;
+    // MD5_Init(&ctx);
+    // MD5_Update(&ctx, str, strlen(str));
+    // MD5_Final(hash, &ctx);
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    EVP_MD_CTX *ctx = EVP_MD_CTX_new();
+    // 上下文   算法    引擎
+    EVP_DigestInit_ex(ctx, EVP_sha256(), NULL);      // 中间参数 EVP_md5 EVP_sha1 EVP_sha256
+    EVP_DigestUpdate(ctx, str, strlen(str));
+    int len;
+    EVP_DigestFinal_ex(ctx, hash, &len);
+    EVP_MD_CTX_free(ctx);                           // 释放空间
+    printf("MD5:\t");
+    for (int i = 0; i < len; i++)
+    {
+        printf("%02x", hash[i]);
+    }
+    printf("\n");
+}
+
+int main()
+{
+    char *str = "hello openSSL";
+    // to_md5(str);
+    // to_sha256(str);
+    // file_sha1("md");
+
+    evp_to_md5(str);
+
+
+    return 0;
+}

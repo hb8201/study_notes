@@ -1,0 +1,41 @@
+// md.c
+// 摘要算法         -lcrypto
+#include <stdio.h>
+#include <string.h>
+
+#include <openssl/md5.h>
+#include <openssl/sha.h>
+#include <openssl/evp.h>
+
+// // 32位
+// // 已被破解，不能对密码进行加密，推荐使用SHA256
+// // 可以用于文件验证、查重（快）
+// void to_md5(char *str)
+// {
+//     // 16
+//     unsigned char hash[MD5_DIGEST_LENGTH];
+//     // 上下文 context - 环境/场景
+//     MD5_CTX ctx;
+//     // 初始化上下文
+//     MD5_Init(&ctx);
+//     // 更新（多次，分片执行）上下文
+//     MD5_Update(&ctx, str, strlen(str));
+//     // 生成最终的哈希值（摘要信息）
+//     MD5_Final(hash, &ctx);
+
+//     // 转十六进制 -> 32（位）
+//     printf("MD5:\t");
+//     for (int i = 0; i < MD5_DIGEST_LENGTH; i++)
+//     {
+//         printf("%02x",hash[i]);
+//     }
+//     printf("\n");
+// }
+
+// void to_sha256(char *str)
+// {
+//     // 32 -> 64
+//     unsigned char hash[SHA256_DIGEST_LENGTH];
+
+//     SHA256_CTX ctx;
+//     SHA256_Init(&ctx);  
