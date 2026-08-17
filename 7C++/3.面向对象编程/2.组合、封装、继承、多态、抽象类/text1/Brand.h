@@ -12,7 +12,7 @@ class Brand
 {
 public:
     std::string name;
-    std::vector<Product *> productlist;   // 品牌销毁，产品销毁（聚合关系）
+    std::vector<Product *> productlist;   // 品牌销毁，产品没销毁（聚合关系）
 
     Brand(std::string n);
     ~Brand();
